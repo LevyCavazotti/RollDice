@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gerador de Dados Online</title>
+
+<!-- Here starts the code for the 6 dice faces  -->
+<style>
+div.dice3{
+    float: left;
+    width:50px;
+    background:#F5F5F5;
+    border:rgb(0, 0, 0) 1px solid;
+    padding:50px;
+    font-size:50px;
+    text-align:center;
+     margin:10px;
+        }
+</style>
+<script>
+function rollDice3(){
+    var die3 = document.getElementById("die3");
+    var status3 = document.getElementById("status3");
+    var d3 = Math.floor(Math.random() * 6) + 1;
+    var diceTotal3 = d3;
+    die3.innerHTML = d3;
+    status3.innerHTML = "Seu resultado é "+diceTotal3+".";
+    if(d3 == 6){
+        status3.innerHTML += " Resultado crítico! Você arrasou!";
+    }
+        
+    if(d3 == 1){
+        status3.innerHTML += " Resultado crítico! Não foi dessa vez.";
+    }
+}
+</script>
+
+<!-- Here starts the code for the 20 dice faces  -->
+<style>
+div.dice{
+	float: left;
+    width:50px;
+	background:#F5F5F5;
+	border:rgb(0, 0, 0) 1px solid;
+	padding:50px;
+	font-size:50px;
+	text-align:center;
+	margin:10px;
+}
+</style>
+<script>
+function rollDice(){
+    var die1 = document.getElementById("die1");
+    var status = document.getElementById("status");
+    var d1 = Math.floor(Math.random() * 20) + 1;
+    var diceTotal = d1;
+    die1.innerHTML = d1;
+    status.innerHTML = "Seu resultado é "+diceTotal+".";
+    if(d1 == 20){
+        status.innerHTML += " Resultado crítico! Você arrasou!";
+    }
+
+    if(d1 == 1){
+        status.innerHTML += " Resultado crítico! Não foi dessa vez.";
+    }
+}
+</script>
+
+<!-- Here starts the code for the 8 dice faces  -->
+<style>
+    div.dice2{
+        float: left;
+        width:50px;
+        background:#F5F5F5;
+        border:rgb(0, 0, 0) 1px solid;
+        padding:50px;
+        font-size:50px;
+        text-align:center;
+        margin:10px;
+    }
+    </style>
+    <script>
+    function rollDice2(){
+        var die2 = document.getElementById("die2");
+        var status = document.getElementById("status2");
+        var d2 = Math.floor(Math.random() * 8) + 1;
+        var diceTotal2 = d2;
+        die2.innerHTML = d2;
+        status2.innerHTML = "Seu resultado é "+diceTotal2+".";
+        if(d2 == 8){
+            status2.innerHTML += " Resultado crítico! Você arrasou!";
+        }
+    
+        if(d2 == 1){
+            status2.innerHTML += " Resultado crítico! Não foi dessa vez.";
+        }
+    }
+    </script>
+</head>
+<body>
+
+<img src="dice6faces.png" alt="d6 dice">
+<img src="dice8faces.png" alt="d8 dice">
+<img src="dice20faces.png" alt="d20 dice">
+
+
+<!-- Here starts the code for the 6 dice faces-->
+    <h1 style="text-align: left;">d6</h1>
+<div id="die3" class="dice3">0</div>
+<button onclick="rollDice3()">Rolar Dado</button>
+<h2 id="status3" style="clear:left; color: rgb(26, 0, 170)"></h2>
+
+<!-- Here starts the code for the 8 dice faces  -->
+<h1 style="text-align: left;">d8</h1>
+<div id="die2" class="dice2">0</div>
+<button onclick="rollDice2()">Rolar Dado</button>
+<h2 id="status2" style="clear:left; color: rgb(26, 0, 170)"></h2>
+
+<!-- Here starts the code for the 20 dice faces  -->
+    <h1 style="text-align: left;">d20</h1>
+<div id="die1" class="dice">0</div>
+<button onclick="rollDice()">Rolar Dado</button>
+<h2 id="status" style="clear:left; color: rgb(26, 0, 170)"></h2>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.3.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+</body>
+</html>
